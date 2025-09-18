@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    width: max-content;
+    height: 3.8rem;
+    position: fixed;
+    left: 50%;
+    top: 1rem;
+    transform: translate(-50%);
+    background-color: #464646;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-shadow: 0 0 15px rgb(46, 46, 46);
+}
+
+.logos {
+    height: 100%;
+    padding: 0 0 0 0.5rem;
+    position: relative;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.3rem;
+    overflow: hidden;
+}
+
+.logos img {
+    width: 5rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.logos:first-child {
+    border-radius: 2rem 0 0 2rem;
+}
+
+.logos::after {
+    content: "";
+    margin: 0 0 0 0.5rem;
+    width: 1px;
+    height: 2rem;
+    background-color: gray;
+}
+
+.logos:hover .shine {
+    display: initial;
+}
+
+.shine {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -75%;
+    /* start off-screen */
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-20deg);
+    animation: shineMove 1.2s ease;
+    pointer-events: none;
+}
+
+@keyframes shineMove {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
+
+.menu {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.standings {
+    height: 100%;
+    position: relative;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Outfit';
+    font-size: 1.2rem;
+    color: #e2e2e2;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.standings p {
+    margin: 0;
+}
+
+.standings img {
+    width: 0.8rem;
+}
+
+.standings:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.standings:hover img {
+    animation: dropdown 0.3s ease forwards;
+}
+
+@keyframes dropdown {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(-90deg);
+    }
+}
+
+.standings:hover .standings-show a {
+    display: initial;
+}
+
+.standings:hover .standings-show {
+    animation: standings-show 0.3s ease forwards;
+}
+
+@keyframes standings-show {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 6.1rem;
+    }
+}
+
+
+.standings .standings-show {
+    height: 0;
+    display: flex;
+    position: absolute;
+    top: 3.8rem;
+    left: 0;
+    background-color: #464646;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1px;
+    border-radius: 0 0 0.5rem 0.5rem;
+    border-top: 1px solid gray;
+    overflow: hidden;
+}
+
+.standings-show a {
+    padding: 0.5rem 0.7rem;
+    display: none;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #e2e2e2;
+    line-height: 2rem;
+}
+
+.standings-show a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.race-results {
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    font-family: 'Outfit';
+    font-size: 1.2rem;
+    color: #e2e2e2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.race-results:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.season-2025 {
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-family: 'Outfit';
+    font-size: 1.2rem;
+    color: #e2e2e2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border-radius: 0 2rem 2rem 0;
+}
+
+.new-tab {
+    width: 0.9rem;
+    height: 0.9rem;
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+.season-2025:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
