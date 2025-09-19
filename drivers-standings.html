@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="drivers-standings/f1-logo.avif" sizes="32x32">
     <link rel="stylesheet" href="drivers-standings.css">
+    <link rel="preload" as="image" href="drivers-standings/f1-grid.avif">
+    <link rel="shortcut icon" href="drivers-standings/f1-logo.avif" type="image/x-icon">
     <title>F1 Drivers Standings</title>
 </head>
 
@@ -37,7 +38,105 @@
         <img src="drivers-standings/f1-grid.avif" alt="f1-grid">
         <h1>2026 F1 Drivers Standings</h1>
     </div>
-    <main></main>
+    <main>
+        <div class="podiums">
+            <div class="first">
+                <div class="div1" id="first-div1">
+                    <img src="drivers-standings/javad.avif" alt="javad" class="driver-pic" id="javad-driver-pic">
+                    <div class="driver-name-nation">
+                        <p>Javad Nick</p>
+                        <img src="drivers-standings/iran.svg" alt="iran">
+                    </div>
+                    <div class="team">
+                        <img src="drivers-standings/ferrari-logo.avif" alt="ferrari">
+                        <p>Ferrari</p>
+                    </div>
+                    <p class="points">123 <sub>Pts</sub></p>
+                    <img src="drivers-standings/dropdown.png" alt="dropdown" class="dropdown" id="first-dropdown"
+                        onclick="firstDropdown()">
+                </div>
+                <div class="div2" id="first-div2">
+                    <p class="stats-header">2026 Season Stats</p>
+                    <div class="row1">
+                        <p>Races: 5</p>
+                        <p>Pole Positions: 3</p>
+                    </div>
+                    <div class="row2">
+                        <p>Wins: 4</p>
+                        <p>Fastest Laps: 5</p>
+                    </div>
+                    <div class="row3">
+                        <p>Podiums: 5</p>
+                        <p>DNFs: 0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="second">
+                <div class="div1" id="second-div1">
+                    <img src="drivers-standings/leclerc.avif" alt="leclerc" class="driver-pic" id="leclerc-driver-pic">
+                    <div class="driver-name-nation">
+                        <p>Charles Leclerc</p>
+                        <img src="drivers-standings/monaco.svg" alt="monaco">
+                    </div>
+                    <div class="team">
+                        <img src="drivers-standings/ferrari-logo.avif" alt="ferrari">
+                        <p>Ferrari</p>
+                    </div>
+                    <p class="points">94 <sub>Pts</sub></p>
+                    <img src="drivers-standings/dropdown.png" alt="dropdown" class="dropdown" id="second-dropdown"
+                        onclick="secondDropdown()">
+                </div>
+                <div class="div2" id="second-div2">
+                    <p class="stats-header">2026 Season Stats</p>
+                    <div class="row1">
+                        <p>Races: 5</p>
+                        <p>Pole Positions: 1</p>
+                    </div>
+                    <div class="row2">
+                        <p>Wins: 1</p>
+                        <p>Fastest Laps: 0</p>
+                    </div>
+                    <div class="row3">
+                        <p>Podiums: 5</p>
+                        <p>DNFs: 0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="third">
+                <div class="div1" id="third-div1">
+                    <img src="drivers-standings/hamilton.avif" alt="hamilton" class="driver-pic"
+                        id="hamilton-driver-pic">
+                    <div class="driver-name-nation">
+                        <p>Lewis Hamilton</p>
+                        <img src="drivers-standings/great-britain.svg" alt="great-britain">
+                    </div>
+                    <div class="team">
+                        <img src="drivers-standings/mercedes-logo.avif" alt="mercedes">
+                        <p>Mercedes-benz</p>
+                    </div>
+                    <p class="points">62 <sub>Pts</sub></p>
+                    <img src="drivers-standings/dropdown.png" alt="dropdown" class="dropdown" id="third-dropdown"
+                        onclick="thirdDropdown()">
+                </div>
+                <div class="div2" id="third-div2">
+                    <p class="stats-header">2026 Season Stats</p>
+                    <div class="row1">
+                        <p>Races: 5</p>
+                        <p>Pole Positions: 1</p>
+                    </div>
+                    <div class="row2">
+                        <p>Wins: 0</p>
+                        <p>Fastest Laps: 0</p>
+                    </div>
+                    <div class="row3">
+                        <p>Podiums: 3</p>
+                        <p>DNFs: 0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="drivers-standings.js"></script>
 </body>
 
 </html>
