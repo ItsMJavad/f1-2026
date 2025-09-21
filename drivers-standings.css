@@ -60,6 +60,9 @@ header {
     width: 5rem;
     height: auto;
     object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .logos:first-child {
@@ -128,10 +131,18 @@ header {
 
 .standings p {
     margin: 0;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .standings img {
     width: 0.8rem;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .standings:hover {
@@ -210,6 +221,9 @@ header {
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .race-results:hover {
@@ -229,6 +243,9 @@ header {
     transition: all 0.3s ease;
     text-decoration: none;
     border-radius: 0 2rem 2rem 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .new-tab {
@@ -255,6 +272,10 @@ header {
     image-rendering: optimizeSpeed;
     object-fit: cover;
     display: block;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .grid-img h1 {
@@ -274,6 +295,7 @@ header {
     white-space: nowrap;
     padding-top: 1rem;
     z-index: 1000;
+    cursor: default;
 }
 
 main {
@@ -436,6 +458,9 @@ main {
     transform: rotate(-90deg);
     border-radius: 50%;
     cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .div1 .dropdown:hover {
@@ -555,6 +580,14 @@ main {
     .div1 .driver-pic {
         display: none;
     }
+
+    .div1 .driver-name-nation {
+        font-size: 1.5rem;
+    }
+
+    .div1 .team {
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width:650px) {
@@ -566,13 +599,66 @@ main {
         font-size: 1.9rem;
     }
 
+    .div1 .driver-name-nation {
+        font-size: 1.3rem;
+    }
+
+    .div1 .points {
+        font-size: 1.3rem;
+    }
+
     .div1 .team {
-        display: none;
+        font-size: 1rem;
     }
 
     .div2 .row1,
     .div2 .row2,
     .div2 .row3 {
         width: 85%;
+    }
+}
+
+@media (max-width:415px) {
+    .logos img {
+        width: 3rem;
+    }
+
+    .logos::after {
+        margin: 0 0 0 0.1rem;
+    }
+
+    .standings {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+
+    .standings img {
+        width: 0.7rem;
+    }
+
+    .race-results {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+
+    .season-2025 {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+
+    .grid-img h1 {
+        font-size: 1.4rem;
+    }
+
+    .div1 .driver-name-nation {
+        font-size: 1.1rem;
+    }
+
+    .div1 .team {
+        display: none;
+    }
+
+    .div1 .points {
+        font-size: 1.1rem;
     }
 }
