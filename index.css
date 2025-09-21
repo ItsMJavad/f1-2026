@@ -8,6 +8,11 @@
     src: url(index/Shrikhand/Shrikhand-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Outfit';
+    src: url(index/Outfit/Outfit-VariableFont_wght.ttf);
+}
+
 body {
     margin: 0;
     padding: 0;

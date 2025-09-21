@@ -13,6 +13,11 @@
     src: url(drivers-standings/Sansation/Sansation-Bold.ttf);
 }
 
+@font-face {
+    font-family: 'Outfit';
+    src: url(drivers-standings/Outfit/Outfit-VariableFont_wght.ttf);
+}
+
 body {
     margin: 0;
     padding: 0;
