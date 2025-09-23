@@ -308,6 +308,13 @@ header {
 }
 
 @media (max-width:415px) {
+    body {
+        background: url(index/mobile-background.avif);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
     .logos img {
         width: 3rem;
     }
