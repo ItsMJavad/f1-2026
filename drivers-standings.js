@@ -1,3 +1,6 @@
+window.addEventListener("load", function () {
+    this.document.getElementById("loader").style.display = "none";
+})
 const firstDropdownButton = document.getElementById("first-dropdown");
 const firstDiv1 = document.getElementById("first-div1");
 const firstDiv2 = document.getElementById("first-div2");
