@@ -447,14 +447,26 @@ main {
 
 #javad-driver-pic {
     background-color: #ed1131;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #leclerc-driver-pic {
     background-color: #ed1131;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #hamilton-driver-pic {
     background-color: #00d6b5;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
     padding: 0.3rem 0 0 0;
     width: 5.3rem;
 }
@@ -694,7 +706,9 @@ main {
 }
 
 .non-podiums .points {
+    width: 4rem;
     font-size: 1.1rem;
+    text-align: center;
 }
 
 @media (max-width:768px) {
@@ -732,6 +746,7 @@ main {
     }
 
     .non-podiums .points {
+        width: unset;
         font-size: 1rem;
     }
 }
