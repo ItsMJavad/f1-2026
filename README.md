@@ -1,4 +1,4 @@
-# <a href="itsmjavad.github.io/f1-2026">A Website for my own formula 1 season in assetto corsa video game</a>
+# <a href="https://itsmjavad.github.io/f1-2026" target="_blank">A Website for my own formula 1 season in assetto corsa video game</a>
 <details>
   <summary><strong>Full drivers standings (24/24 races completed):</strong></summary>
       1. Me (Ferrari)  587<sub>Pts</sub><br>
