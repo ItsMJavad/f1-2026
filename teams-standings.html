@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teams-standings.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="logos">
+            <img src="teams-standings/fia logo.avif" alt="fia">
+            <a href="index.html"><img src="teams-standings/f1-logo.avif" alt="f1"></a>
+            <div class="shine"></div>
+        </div>
+        <div class="menu">
+            <div class="standings">
+                <p>Standings</p>
+                <img src="teams-standings/dropdown.png" alt="dropdown-img">
+                <div class="standings-show">
+                    <a href="drivers-standings.html">Drivers Standings</a>
+                    <a href="teams-standings.html">Teams Standings</a>
+                </div>
+            </div>
+            <a href="#" class="race-results">Race Results</a>
+            <a href="https://itsmjavad.github.io/formula1" class="season-2025" target="_blank">2025 Season <svg
+                    class="new-tab" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                    <path
+                        d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z" />
+                </svg></a>
+        </div>
+    </header>
+    <div class="loader" id="loader">
+        <div class="container">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+    <div class="photo-section">
+        <img src="teams-standings/photo.avif" alt="photo">
+        <h1>2026 F1 Teams Standings</h1>
+    </div>
+    <main>
+        <div class="team-standings">
+            <div class="team1">
+                <img src="teams-standings/ferrari.avif" alt="ferrari" class="team-img">
+                <div class="info-container">
+                    <div class="team-name-points">
+                        <div class="team-name">
+                            <img src="teams-standings/ferrari-logo.avif" alt="ferrari">
+                            <h2>Ferrari</h2>
+                        </div>
+                        <p class="points">962 <sub>Pts</sub></p>
+                    </div>
+                    <div class="team-drivers-results">
+                        <p class="drivers">Javad Nick #44 <br> Charles Leclerc #16</p>
+                        <div class="results">
+                            <div class="p1">
+                                <p>21</p>
+                                <img src="teams-standings/1st-medal.png" alt="p1">
+                            </div>
+                            <div class="p2">
+                                <p>17</p>
+                                <img src="teams-standings/2nd-medal.png" alt="p2">
+                            </div>
+                            <div class="p3">
+                                <p>5</p>
+                                <img src="teams-standings/3rd-medal.png" alt="p3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team2">
+                <img src="teams-standings/mercedes.avif" alt="mercedes" class="team-img">
+                <div class="info-container">
+                    <div class="team-name-points">
+                        <div class="team-name">
+                            <img src="teams-standings/mercedes-logo.avif" alt="mercedes">
+                            <h2>Mercedes-Benz</h2>
+                        </div>
+                        <p class="points">519 <sub>Pts</sub></p>
+                    </div>
+                    <div class="team-drivers-results">
+                        <p class="drivers">Lewis Hamilton #44 <br> Valtteri Bottas #77</p>
+                        <div class="results">
+                            <div class="p1">
+                                <p>3</p>
+                                <img src="teams-standings/1st-medal.png" alt="p1">
+                            </div>
+                            <div class="p2">
+                                <p>5</p>
+                                <img src="teams-standings/2nd-medal.png" alt="p2">
+                            </div>
+                            <div class="p3">
+                                <p>12</p>
+                                <img src="teams-standings/3rd-medal.png" alt="p3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team3">
+                <img src="teams-standings/redbull.avif" alt="redbull" class="team-img">
+                <div class="info-container">
+                    <div class="team-name-points">
+                        <div class="team-name">
+                            <img src="teams-standings/redbull-logo.avif" alt="redbull">
+                            <h2>Redbull</h2>
+                        </div>
+                        <p class="points">349 <sub>Pts</sub></p>
+                    </div>
+                    <div class="team-drivers-results">
+                        <p class="drivers">Max Verstappen #1 <br> Sergio Perez #11</p>
+                        <div class="results">
+                            <div class="p1">
+                                <p>0</p>
+                                <img src="teams-standings/1st-medal.png" alt="p1">
+                            </div>
+                            <div class="p2">
+                                <p>2</p>
+                                <img src="teams-standings/2nd-medal.png" alt="p2">
+                            </div>
+                            <div class="p3">
+                                <p>2</p>
+                                <img src="teams-standings/3rd-medal.png" alt="p3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team4">
+                <img src="teams-standings/mclaren.avif" alt="mclaren" class="team-img">
+                <div class="info-container">
+                    <div class="team-name-points">
+                        <div class="team-name">
+                            <p class="team-rank">4</p>
+                            <img src="teams-standings/mclaren-logo.avif" alt="mclaren">
+                            <h2>Mclaren</h2>
+                        </div>
+                        <p class="points">321 <sub>Pts</sub></p>
+                    </div>
+                    <div class="team-drivers-results">
+                        <p class="drivers">Lando Norris #4 <br> Oscar Piastri #81</p>
+                        <div class="results">
+                            <div class="p1">
+                                <p>0</p>
+                                <img src="teams-standings/1st-medal.png" alt="p1">
+                            </div>
+                            <div class="p2">
+                                <p>0</p>
+                                <img src="teams-standings/2nd-medal.png" alt="p2">
+                            </div>
+                            <div class="p3">
+                                <p>1</p>
+                                <img src="teams-standings/3rd-medal.png" alt="p3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team5">
+                <img src="teams-standings/sauber.avif" alt="sauber" class="team-img">
+                <div class="info-container">
+                    <div class="team-name-points">
+                        <div class="team-name">
+                            <p class="team-rank">5</p>
+                            <img src="teams-standings/sauber.svg" alt="sauber">
+                            <h2>Sauber</h2>
+                        </div>
+                        <p class="points">266 <sub>Pts</sub></p>
+                    </div>
+                    <div class="team-drivers-results">
+                        <p class="drivers">Nico Hulkenberg #27 <br> Gabriel Bortoleto #5</p>
+                        <div class="results">
+                            <div class="p1">
+                                <p>0</p>
+                                <img src="teams-standings/1st-medal.png" alt="p1">
+                            </div>
+                            <div class="p2">
+                                <p>0</p>
+                                <img src="teams-standings/2nd-medal.png" alt="p2">
+                            </div>
+                            <div class="p3">
+                                <p>3</p>
+                                <img src="teams-standings/3rd-medal.png" alt="p3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="teams-standings.js"></script>
+</body>
+
+</html>

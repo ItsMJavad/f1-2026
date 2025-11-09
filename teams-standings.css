@@ -1,0 +1,496 @@
+@font-face {
+    font-family: Bevan;
+    src: url(teams-standings/Bevan/Bevan-Regular.ttf);
+}
+
+@font-face {
+    font-family: Ultra;
+    src: url(teams-standings/Ultra/Ultra-Regular.ttf);
+}
+
+@font-face {
+    font-family: Zen-Dots;
+    src: url(teams-standings/Zen_Dots/ZenDots-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #303030;
+}
+
+header {
+    width: max-content;
+    height: 3.8rem;
+    position: fixed;
+    left: 50%;
+    top: 1rem;
+    transform: translate(-50%);
+    background-color: #3a3a3aef;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-shadow: 0 0 15px rgb(46, 46, 46);
+    z-index: 2000;
+}
+
+.logos {
+    height: 100%;
+    padding: 0 0 0 0.5rem;
+    position: relative;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.3rem;
+    overflow: hidden;
+}
+
+.logos img {
+    width: 5rem;
+    height: auto;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.logos:first-child {
+    border-radius: 2rem 0 0 2rem;
+}
+
+.logos::after {
+    content: "";
+    margin: 0 0 0 0.5rem;
+    width: 1px;
+    height: 2rem;
+    background-color: gray;
+}
+
+.logos:hover .shine {
+    display: initial;
+}
+
+.shine {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -75%;
+    /* start off-screen */
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-20deg);
+    animation: shineMove 1.2s ease;
+    pointer-events: none;
+}
+
+@keyframes shineMove {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
+
+.menu {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.standings {
+    height: 100%;
+    position: relative;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Outfit';
+    font-size: 1.2rem;
+    color: #e2e2e2;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.standings p {
+    margin: 0;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.standings img {
+    width: 0.8rem;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.standings:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.standings:hover img {
+    animation: dropdown 0.3s ease forwards;
+}
+
+@keyframes dropdown {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(-90deg);
+    }
+}
+
+.standings:hover .standings-show a {
+    display: initial;
+}
+
+.standings:hover .standings-show {
+    animation: standings-show 0.3s ease forwards;
+}
+
+@keyframes standings-show {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 6.1rem;
+    }
+}
+
+
+.standings .standings-show {
+    height: 0;
+    display: flex;
+    position: absolute;
+    top: 3.8rem;
+    left: 0;
+    background-color: #3a3a3aef;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    border-radius: 0 0 0.5rem 0.5rem;
+    border-top: 1px solid gray;
+    overflow: hidden;
+}
+
+.standings-show a {
+    padding: 0.5rem 0.7rem;
+    display: none;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #e2e2e2;
+    line-height: 2rem;
+}
+
+.standings-show a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.race-results {
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    font-family: 'Outfit';
+    font-size: 1.2rem;
+    color: #e2e2e2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.race-results:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.season-2025 {
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-family: 'Outfit';
+    font-size: 1.2rem;
+    color: #e2e2e2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border-radius: 0 2rem 2rem 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.new-tab {
+    width: 0.9rem;
+    height: 0.9rem;
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+.season-2025:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loader .container {
+    width: 12rem;
+    height: 12rem;
+    margin: auto;
+    background-color: white;
+    border-radius: 1rem;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.loader .spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 5px solid #ddd;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.photo-section {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.photo-section img {
+    width: 100%;
+    height: 50rem;
+    image-rendering: optimizeSpeed;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.photo-section h1 {
+    width: 100%;
+    height: 10rem;
+    text-align: center;
+    background-color: #46464686;
+    position: absolute;
+    bottom: -4rem;
+    left: 50%;
+    transform: translate(-50%);
+    color: #ac0303;
+    font-size: 5rem;
+    font-weight: 600;
+    font-family: 'Zen-Dots';
+    white-space: nowrap;
+    padding-top: 1rem;
+    z-index: 1000;
+    cursor: default;
+}
+
+main {
+    width: 95%;
+    margin: 3rem auto;
+    box-sizing: border-box;
+}
+
+.team-standings {
+    width: 100%;
+    margin: 3rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.team-standings p {
+    margin: 0;
+}
+
+.team1,
+.team2,
+.team3,
+.team4,
+.team5 {
+    width: 75%;
+    max-width: 80rem;
+    height: 14rem;
+    padding: 0 1rem 0 0;
+    background-color: #15151e;
+    box-shadow: 1px 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.team5 {
+    margin-bottom: 3rem;
+}
+
+.team-standings .team-img {
+    width: 23rem;
+    object-fit: cover;
+}
+
+.team-standings .info-container {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-container .team-name-points {
+    flex: 1;
+    height: 100%;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Bevan';
+    color: rgb(219, 219, 219);
+}
+
+.team-name-points .team-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.team-name img {
+    width: 3rem;
+}
+
+.team-name h2 {
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+.team-name-points .points {
+    font-size: 1.4rem;
+}
+
+.info-container .team-drivers-results {
+    height: 100%;
+    flex: 1;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team-drivers-results .drivers {
+    font-size: 1.2rem;
+    font-family: 'Ultra';
+    color: rgb(219, 219, 219);
+}
+
+.team-drivers-results .results {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.results img {
+    width: 2rem;
+}
+
+.p1,
+.p2,
+.p3 {
+    font-family: 'Bevan';
+    font-size: 1.1rem;
+    color: rgb(180, 180, 180);
+    display: flex;
+    align-items: center;
+}
+
+.team1 {
+    border: 1px solid #FEE101;
+    box-shadow: 1px 0 10px #FEE101;
+}
+
+.team2 {
+    border: 1px solid #D7D7D7;
+    box-shadow: 1px 0 10px #D7D7D7;
+}
+
+.team3 {
+    border: 1px solid #824A02;
+    box-shadow: 1px 0 10px #824A02;
+}
+
+.team-rank {
+    font-size: 2rem;
+}
+
+@media (max-width:768px) {
+    header {
+        height: fit-content;
+        gap: 0;
+    }
+
+    .menu a {
+        padding: 1rem 0.6rem;
+    }
+}

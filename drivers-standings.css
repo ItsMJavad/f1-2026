@@ -331,7 +331,7 @@ header {
     height: 10rem;
     text-align: center;
     background-color: #46464686;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     position: absolute;
     bottom: -4rem;
     left: 50%;
